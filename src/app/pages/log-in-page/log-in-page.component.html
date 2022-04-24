@@ -1,0 +1,27 @@
+<div class="centered-content">
+    <div class="login-form">
+        <h1>LogIn Please</h1>
+        <mat-form-field appearance="fill">
+            
+            <mat-label>Enter your email</mat-label>
+            <input #emailInput matInput placeholder="pat@example.com" [formControl]="email" required>
+            <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+          </mat-form-field>
+
+          <mat-form-field appearance="fill">
+            <mat-label>Enter your password</mat-label>
+            <input #passwordInput matInput [type]="hide ? 'password' : 'text'">
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+              <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+          </mat-form-field>
+          <button class = 'btn' mat-raised-button color="accent"  (click)= "onLogInButtonClicked(emailInput.value, passwordInput.value)" >
+            LogIn</button>
+
+            <br>
+
+            <p>Don't have an account?<a routerLink ="/signup">Sign Up Now!</a></p>
+            
+           
+    </div>
+</div>

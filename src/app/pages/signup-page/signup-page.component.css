@@ -1,0 +1,16 @@
+.login-form {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    padding: 100px;
+    border-radius: 20px;
+}
+h1 {
+    text-align: center;
+    color: blue
+}
+.move {
+    z-index: 1;
+  position: relative;
+}

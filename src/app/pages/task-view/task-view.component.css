@@ -1,0 +1,142 @@
+.centered-content {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.task-manager-container {
+    display:flex;
+    width: 85%;
+    height:65%;
+    max-width:900px;
+    max-height:680px;
+    
+}
+.sidebar {
+    display:flex;
+    flex-direction: column;
+
+    width:150px;
+    background: white;
+    padding:45px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+.tasks-list-container{
+    display:flex;
+    flex-direction: column;
+    flex-grow: 1;
+    background: rgb(241, 237, 237);
+    border-top-right-radius:8px;
+    border-bottom-right-radius:8px;
+    padding: 45px;
+    position: relative;
+}
+.title {
+    font-family: 'Roboto';
+    font-size: 24px;
+    text-transform: uppercase;
+    color: indigo;
+}
+.list-menu{
+    display:flex;
+    flex-direction: column;
+    margin-top:15px;
+    flex-grow: 1;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+.list-menu-item{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 15px;
+    border-radius: 5px;
+    width:100%;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+.list-menu-item:hover {
+    color: lightcoral;
+}
+.list-menu-item :active {
+    color: lightseagreen;
+    
+}
+.task {
+    display:flex;
+    background: white;
+    padding:15px 20px;
+    border-radius: 5px;
+    margin-top:10px;
+    transition:ease;
+    cursor: pointer;
+
+    justify-content: center;
+    align-items: center;
+   
+}
+
+
+.task:hover{
+    box-shadow: 0 0 0 3px #888888;
+    
+}
+.btn {
+    border-radius: 50px;
+}
+.add-btn{
+   position: absolute;
+   bottom:35px;
+   right: 35px;
+}
+
+.completed {
+    text-decoration: line-through;
+
+}
+.empty {
+    color: #777;
+    text-align: center;
+}
+
+.top-bar {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+
+}
+.settings {
+    margin-top: 10px;
+    margin-left: 420px;
+    color:black;
+    cursor:pointer;
+    
+}
+.edit-btn {
+    margin-left:10px;
+}
+.task-text {
+    display:flex;
+    flex-grow: 1;
+}
+.task-btns {
+    opacity:0;
+}
+.task-btns:hover  {
+    opacity:1;
+    transition: 0.2s;
+    transform: 0.5s;
+    transform:scale(0.8);
+}
+
+.logOut {
+   display:flex;
+   align-items:center;
+   justify-content:center;
+  
+    
+}

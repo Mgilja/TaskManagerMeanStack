@@ -1,0 +1,67 @@
+
+<div class="logOut">
+  <button mat-raised-button color="primary" (click)="logOut()">LogOut</button>
+</div>
+
+
+<div class="centered-content">
+  
+    <div class="task-manager-container">
+        <div class="sidebar">
+            <h1 class = 'title'>
+                Lists
+            </h1>
+            <!--- Liste --->
+         <div class="list-menu">
+            <a class="list-menu-item" *ngFor = "let list of lists" [routerLink]="['/lists', list._id]"
+            routerLinkActive= ".task:hover">
+            <p>{{list.title}}</p>
+            </a>
+         </div>
+         <button class = 'btn' mat-raised-button color="accent" routerLink ="/new-list">
+             + New List</button>
+        </div>
+       
+        <div class="tasks-list-container">
+            <div class = "top-bar">
+                <h1 class = 'title'>
+                       Tasks
+                 </h1>
+                <div class = "settings">
+             <mat-icon [matMenuTriggerFor]="menu">settings</mat-icon>
+            <mat-menu #menu="matMenu">
+              <button mat-menu-item  [routerLink] = "['/edit', selectedListId]">update</button>
+              <button mat-menu-item (click)="onDeleteListClick()">delete</button>
+            </mat-menu>
+            </div>
+        </div>
+            
+            
+           
+            
+            
+            
+
+        <!-- Task Elementi-->
+           <div class = 'task' *ngFor = "let task of tasks">
+           <div class ="task-text">
+               <p>{{task.title}}</p>
+           </div>
+           
+           <div class = "task-btns">
+             <button class = "delete-btn" mat-mini-fab color="accent" aria-label="Example icon button with a delete icon" (click) = "onDeleteTaskClick(task._id)">
+                <mat-icon>delete</mat-icon>
+              </button>
+              <button  class = "edit-btn" [routerLink]="['/lists', selectedListId, 'edit-task', task._id]" mat-mini-fab color="basic" aria-label="Example icon button with a delete icon">
+                <mat-icon>edit</mat-icon>
+              </button>
+           </div>
+           
+         </div> 
+         <button class = "add-btn"  routerLink = "./new-task" mat-fab color="accent" aria-label="Example icon button with a delete icon">
+            <mat-icon>add</mat-icon>
+          </button>
+        
+    </div>
+    
+</div>

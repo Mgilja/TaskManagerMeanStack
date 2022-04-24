@@ -1,0 +1,24 @@
+<div class="centered-content">
+    <div class="model-box">
+      <h1 class = "title">Create New task</h1>
+
+        <form  class="example-form" >
+            <mat-form-field  class="example-full-width" appearance="fill">
+              <mat-label>Create new task</mat-label>
+              <input #taskTitleInput type="task" matInput 
+                     placeholder="Create new task">
+            </mat-form-field>
+          </form>
+          
+             <div class='btns'>
+                <button class = 'btn' matSuffix  mat-raised-button color="accent" 
+                (click)= "createTask(taskTitleInput.value)">
+                    + CREATE</button>
+                <button class = 'btn' routerLink = "/" matSuffix  mat-raised-button color="accent">
+                        Cancel </button>
+             </div>
+        
+                
+
+    </div>
+</div>
